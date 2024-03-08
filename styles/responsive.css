@@ -1,0 +1,11 @@
+@media screen and (max-width: 768px) {
+    .game-wrapper {
+        background-image: url('/assets/images/background-tablet.svg');
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .game-wrapper {
+        background-image: url('/assets/images/background-mobile.svg');
+    }
+}

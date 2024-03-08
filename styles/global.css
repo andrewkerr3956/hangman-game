@@ -1,0 +1,58 @@
+:root {
+    --dark-navy: rgb(38, 22, 118);
+    --blue: rgb(36, 98, 255);
+    --white: rgb(255, 255, 255);
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.game-wrapper {
+    background-image: url('/assets/images/background-desktop.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100dvh;
+    width: 100dvw;
+    overflow: hidden;
+}
+
+/* Start MenuWindow Component */
+.menu-container {
+    background: var(--dark-navy);
+    height: 500px;
+    width: 592px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    border-radius: 72px;
+}
+
+.menu-logo {
+    transform: translate(111px, -110px);
+    position: absolute;
+}
+
+.menu-inner {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    justify-content: end;
+    align-items: center;
+    row-gap: 25%;    
+}
+/* End MenuWindow Component */
+
+/* Start PlayButton Component */
+.button-play {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+/* End PlayButton Component */
