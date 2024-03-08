@@ -13,7 +13,14 @@ export const MenuWindow = () => (
         </picture>
         <div className="menu-inner">
             <PlayButton />
-            How To Play    
+            <button 
+                className="button-navy text-heading-sm"
+                style={{
+                    marginBottom: '51px'
+                }}
+            >
+                How To Play
+            </button>
         </div>
     </div>
 )
