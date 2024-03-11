@@ -1,15 +1,19 @@
 import { useState } from 'react'
-import { MenuWindow } from './components/menu'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { HowToPlayRoute, DefaultRoute } from './routes'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div className='game-wrapper'>
-        <MenuWindow />
-      </div>
-    </>
+    <div className='game-wrapper'>
+    <BrowserRouter>
+    <Routes>
+      <Route path='how-to-play' element={<HowToPlayRoute />} />
+      <Route path='/' element={<DefaultRoute />} />
+    </Routes>
+    </BrowserRouter>
+    </div>
   )
 }
 

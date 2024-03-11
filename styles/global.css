@@ -8,18 +8,28 @@
     --blue: rgb(36, 98, 255);
     --white: rgb(255, 255, 255);
     --pink-blue-gradient: linear-gradient(#FE71FE, #7199FF);
+    --blue-white-gradient: linear-gradient(#67B6FF, #FFFFFF);
+    --dark-blue: rgb(36, 48, 65);
+    --purple: rgb(136, 125, 192);
 }
 
-html, body {
+html, body, #root {
     margin: 0;
     padding: 0;
+    overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: unset;
 }
 
 * {
     font-family: MouseMemoirs;
+    box-sizing: border-box;
 }
 
-.text-heading-xl {
+.text-heading-xl,
+.text-heading-xl-menu {
     font-size: 136px;
 }
 
@@ -29,14 +39,28 @@ html, body {
 
 .text-heading-md {
     font-size: 48px;
+    letter-spacing: 2.5px;
+    line-height: 120%;
 }
 
 .text-heading-sm {
     font-size: 32px;
+    letter-spacing: 2.5px;
+    line-height: 120%;
+}
+
+.text-heading-xl-menu {
+    position: relative;
+    color: transparent;
+    background-image: var(--blue-white-gradient);
+    background-clip: text;
+    
 }
 
 .text-body {
     font-size: 26px;
+    letter-spacing: 2.5px;
+    line-height: 120%;
 }
 
 .game-wrapper {
@@ -44,8 +68,9 @@ html, body {
     background-repeat: no-repeat;
     background-size: cover;
     height: 100dvh;
-    width: 100dvw;
+    width: 100%;
     overflow: hidden;
+    padding: 80px 112px;
 }
 
 /* Start MenuWindow Component */
@@ -88,9 +113,68 @@ html, body {
 }
 /* End PlayButton Component */
 
+/* Start How To Play Route */
+.htp-menu {
+    display: flex;
+    flex-direction: column;
+    row-gap: 64px;
+    width: 100%;
+}
+
+.htp-guide {
+    min-height: 550px;
+    max-height: 550px;
+    background-color: var(--white);
+    border-radius: 40px;
+    padding: 60px 43.5px;
+    flex: 1;
+    text-align: center;
+}
+
+.htp-guide h2 {
+    font-size: 88px;
+    color: var(--blue);
+}
+
+.htp-guide h3 {
+    font-size: 48px;
+    padding: 40px 0;
+    text-transform: uppercase;
+    color: var(--dark-navy);
+}
+
+.htp-guide p {
+    font-size: 26px;
+    color: var(--purple);
+    text-wrap: justify;
+}
+
+.htp-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Add 224px since 112px padding on each side. We want to use full width. */
+    width: calc(50% + 224px);
+    text-align: center;
+}
+
+.htp-main {
+    display: flex;
+    align-items: center;
+    column-gap: 48px;
+}
+/* End How To Play Route */
+
 .button-navy {
     padding: 12px 64px;
     color: var(--white);
     background-color: var(--blue);
     border-radius: 40px;
+}
+
+.button-back {
+    padding: 22px 27px 34px;
+    background-image: var(--pink-blue-gradient);
+    border-radius: 999px;
+    cursor: pointer;
 }

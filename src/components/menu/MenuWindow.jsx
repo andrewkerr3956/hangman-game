@@ -1,7 +1,12 @@
+import { useNavigate } from "react-router-dom";
 import { PlayButton } from "./PlayButton";
+import { Window } from "../common";
 
-export const MenuWindow = () => (
-    <div 
+export const MenuWindow = () => {
+    const navigation = useNavigate();
+    
+    return (
+    <Window 
         id="menu-window"
         className="menu-container"
     >
@@ -18,9 +23,11 @@ export const MenuWindow = () => (
                 style={{
                     marginBottom: '51px'
                 }}
+                onClick={() => navigation('how-to-play')}
             >
                 How To Play
             </button>
         </div>
-    </div>
-)
+    </Window>
+    )
+}
